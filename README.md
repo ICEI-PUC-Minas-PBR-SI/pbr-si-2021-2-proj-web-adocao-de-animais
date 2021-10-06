@@ -1,18 +1,19 @@
-# Nome do projeto
+# BH Adota Pet
 
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+O objetivo é a criação de um portal de adoção de animais que apresente ferramentas de fácil uso e que permita a integração dos agentes envolvidos no processo de adoção, resgate e doação de animais
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Daniel Cima Bittarães
+* Roberta Giovana Soares 
+* Eliabner Teixeira Marques
+* Jêniffer Camila Gonçalves Rocha
+* Guilherme Lopes Fogli Cota
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Ivre Marjorie Ribeiro Machado
+* Sandra Maria Silveira
 
 ## Instruções de utilização
 
