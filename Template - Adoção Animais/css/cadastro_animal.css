@@ -1,0 +1,35 @@
+.btn-outline{
+    color: coral !important;
+    border-color: coral !important;
+}
+
+.cadastro_animal p{
+    padding-top: 1cm;
+    color: lightslategray;
+    font-family: 'Montserrat';
+}
+
+.especie{
+    margin-top:  30px;
+    padding-left: 470px;
+}
+
+.sexo{
+    margin-top:  30px;
+    padding-left: 470px;
+}
+
+.porte{
+    margin-top:  30px;
+    padding-left: 470px;
+}
+
+.upload_foto{
+    margin-top:  30px;
+}
+
+.idade{
+    margin-top:  30px;
+}
+
+
