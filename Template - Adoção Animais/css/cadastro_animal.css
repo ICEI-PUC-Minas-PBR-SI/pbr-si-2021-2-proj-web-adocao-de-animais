@@ -9,6 +9,21 @@
     font-family: 'Montserrat';
 }
 
+form{
+    color: lightslategray !important;
+    font-family: 'Montserrat' !important;
+}
+
+.form-select{
+    color: lightslategray !important;
+    font-family: 'Montserrat' !important;
+}
+
+.form-control{
+    color: lightslategray !important;
+    font-family: 'Montserrat' !important;
+}
+
 .item .item-content {
     padding: 30px 35px
 }

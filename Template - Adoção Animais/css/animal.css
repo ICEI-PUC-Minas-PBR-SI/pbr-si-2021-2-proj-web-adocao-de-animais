@@ -1,13 +1,14 @@
 
 .perfil{
     height: 350px;
-    padding: 25px 200px;
+    
     
 
 }
 
 .perfil_texto p{
     padding-top: 1cm;
+    text-align: justify;
 }
 
 .perfil {
@@ -25,7 +26,7 @@
 
 .miniatura img{
 
-    padding-left: 200px;
+    
     height: 100px;
     
 }
