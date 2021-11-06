@@ -1,0 +1,22 @@
+.btn-outline{
+    color: coral !important;
+    border-color: coral !important;
+}
+
+.login p{
+    padding-top: 1cm;
+    color: lightslategray;
+    font-family: 'Montserrat';
+}
+
+.linkcriarconta{
+    margin-top: 5cm;
+    }
+
+.linkcriarconta a{
+    
+    
+    text-decoration: none;
+    color: lightslategray;
+    font-family: 'Montserrat';
+}

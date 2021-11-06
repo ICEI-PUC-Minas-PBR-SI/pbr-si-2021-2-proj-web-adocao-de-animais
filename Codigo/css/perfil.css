@@ -1,0 +1,44 @@
+.perfil{
+    height: 350px;
+    padding: 25px 200px;
+    
+
+}
+
+.perfil_texto p{
+    padding-top: 1cm;
+}
+
+.perfil {
+    font-family: 'Montserrat';
+    color: lightslategray;
+}
+
+.contatoadotar {
+    height: 100px;
+    padding-top: 30px;
+    font-family: 'Montserrat';
+    color: lightslategray;
+    
+}
+
+.miniatura img{
+
+    
+    height: 100px;
+    
+}
+h3 {
+    font-family: 'Montserrat';
+    color: lightslategray;
+}
+
+.btn-outline{
+    color: coral !important;
+    border-color: coral !important;
+}
+
+.btn-lg{
+    color: coral !important;
+    border-color: coral !important;
+}

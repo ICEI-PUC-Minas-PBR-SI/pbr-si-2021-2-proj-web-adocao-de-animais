@@ -15,12 +15,12 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand me-5 text-center" id="logo" href="#">BH ADOTA PET</a>
+                <a class="navbar-brand me-5 text-center" id="logo" href="home.html">BH ADOTA PET</a>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item me-2">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
                   </li>
                   <li class="nav-item me-2">
                     <a class="nav-link" href="#">Dicas</a>
@@ -29,16 +29,32 @@
                     <a class="nav-link" href="#">Sobre</a>
                   </li>
                 </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item me-2">
-                        <a class="nav-link" href="#">Entrar</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="nav-link" href="#">Cadastrar</a>
-                    </li>
-                </ul>
+
+                <div id="user-status">
+                  <ul class="navbar-nav">
+                      <li class="nav-item me-2">
+                          <a class="nav-link" href="login.html">Entrar</a>
+                      </li>
+                      <li class="nav-item me-2">
+                          <a class="nav-link" href="cadastro_usuario.html">Cadastrar</a>
+                      </li>
+                  </ul>
+                </div>
+                <script>
+                  usuario = JSON.parse(sessionStorage.getItem('current_user'));
+                  
+                  if(usuario)
+                  {
+                    perfil_li = `<ul class="navbar-nav">
+                                    <li class="nav-item me-2">
+                                        <a class="nav-link" href="perfil.html">Perfil</a>
+                                    </li>
+                                </ul>`;
+                    document.getElementById("user-status").innerHTML = perfil_li;
+                  }
+                </script>
                 <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="gsdhhsdjk" aria-label="Search">
+                  <input class="form-control me-2" type="search" placeholder="typing.." aria-label="Search">
                   <button class="btn" type="submit">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -49,6 +65,7 @@
             </div>
           </nav>
     </header>
+
     <section class="main container col-8 my-4" id="main-container">
         <div class="row my-2" id="banner-bh-adota">
             <img src="img/banner-bhadotapet.png" class="img-thumbnail" alt="...">
@@ -56,7 +73,7 @@
         </div>        
         <div class="row my-2 py-2 px-4" id="quero-adotar">
             <div class="col-4 home-iteraction">
-                <button class="btn text-uppercase">Quero Adotar</button>             
+                <button class="btn text-uppercase" onclick="location.href='cadastro_animal.html';">Quero Adotar</button>             
             </div>
             <div class="col-4 home-iteraction">
                 <button class="btn text-uppercase">Quero Doar</button>
@@ -84,6 +101,7 @@
             </div>
         </div>
     </section>
+
     <footer>
         <div class="d-flex float-end">
             <div class="m-2 redes-sociais">
