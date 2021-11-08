@@ -1,0 +1,15 @@
+.btn-outline{
+    color: coral !important;
+    border-color: coral !important;
+}
+
+.crieconta p{
+    padding-top: 1cm;
+    color: lightslategray;
+    font-family: 'Montserrat';
+}
+
+.form-control{
+    color: lightslategray !important;
+    font-family: 'Montserrat' !important;
+}

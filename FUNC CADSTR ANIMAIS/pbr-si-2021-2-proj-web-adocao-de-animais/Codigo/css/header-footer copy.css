@@ -1,0 +1,45 @@
+#logo
+{
+    color: white;
+    width: 200px;
+    border-radius: 10px;
+    background-color: coral;
+}
+
+footer
+{
+    height: 40px;
+    background-color: coral;
+}
+
+footer {
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
+
+footer a
+{
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+    color: white;
+}
+footer a svg
+{
+    width: 25px;
+    height: 25px;
+    text-decoration: none;
+    color: white;
+}
+
+.redes-sociais h5
+{
+    font-size: medium;
+    font: 'Montserrat';
+    color: white;
+}
+
+

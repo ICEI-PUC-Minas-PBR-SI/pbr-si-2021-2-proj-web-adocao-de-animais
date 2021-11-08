@@ -1,0 +1,28 @@
+.btn-outline{
+    color: coral !important;
+    border-color: coral !important;
+}
+
+.crieconta p{
+    padding-top: 1cm;
+    color: lightslategray;
+    font-family: 'Montserrat';
+}
+
+.exclue_animal{
+    color: lightslategray;
+    font-family: 'Montserrat';
+}
+
+.exclue_animal_mini img{
+    height: 100px;
+}
+
+.exclue_animal_mini .btn{
+    height: 35px !important;
+}
+
+textarea{
+    color: lightslategray !important;
+    font-family: 'Montserrat' !important;
+}
