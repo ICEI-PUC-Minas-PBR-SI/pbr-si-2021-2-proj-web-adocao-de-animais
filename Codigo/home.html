@@ -12,59 +12,69 @@
 <title>Home</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand me-5 text-center" id="logo" href="home.html">BH ADOTA PET</a>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item me-2">
-                    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
-                  </li>
-                  <li class="nav-item me-2">
-                    <a class="nav-link" href="#">Dicas</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre</a>
-                  </li>
-                </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand me-5 text-center" id="logo" href="home.html">BH ADOTA PET</a>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item me-2">
+                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item me-2">
+                <a class="nav-link" href="#">Dicas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sobre</a>
+              </li>
+            </ul>
 
-                <div id="user-status">
-                  <ul class="navbar-nav">
+            <div id="user-status">
+              <ul class="navbar-nav">
+                  <li class="nav-item me-2">
+                      <a class="nav-link" href="login.html">Entrar</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Cadastrar
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li class="nav-item me-2">
-                          <a class="nav-link" href="login.html">Entrar</a>
+                        <a class="nav-link" href="cadastro_usuario.html?user=1">Usuário</a>
                       </li>
                       <li class="nav-item me-2">
-                          <a class="nav-link" href="cadastro_usuario.html">Cadastrar</a>
+                        <a class="nav-link" href="cadastro_usuario.html?user=2">ONG</a>
                       </li>
-                  </ul>
-                </div>
-                <script>
-                  usuario = JSON.parse(sessionStorage.getItem('current_user'));
-                  
-                  if(usuario)
-                  {
-                    perfil_li = `<ul class="navbar-nav">
-                                    <li class="nav-item me-2">
-                                        <a class="nav-link" href="perfil.html">Perfil</a>
-                                    </li>
-                                </ul>`;
-                    document.getElementById("user-status").innerHTML = perfil_li;
-                  }
-                </script>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="typing.." aria-label="Search">
-                  <button class="btn" type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                      </svg>
-                  </button>
-                </form>
-              </div>
+                    </ul>
+                  </li>
+              </ul>
             </div>
-          </nav>
-    </header>
+            <script>
+              usuario = JSON.parse(sessionStorage.getItem('current_user'));
+              
+              if(usuario)
+              {
+                perfil_li = `<ul class="navbar-nav">
+                                <li class="nav-item me-2">
+                                    <a class="nav-link" href="perfil.html">Perfil</a>
+                                </li>
+                            </ul>`;
+                document.getElementById("user-status").innerHTML = perfil_li;
+              }
+            </script>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="typing.." aria-label="Search">
+              <button class="btn" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+</header>
 
     <section class="main container col-8 my-4" id="main-container">
         <div class="row my-2" id="banner-bh-adota">
@@ -73,17 +83,17 @@
         </div>        
         <div class="row my-2 py-2 px-4" id="quero-adotar">
             <div class="col-4 home-iteraction">
-                <button class="btn text-uppercase" onclick="location.href='cadastro_animal.html';">Quero Adotar</button>             
+                <button class="btn text-uppercase">Quero Adotar</button>             
             </div>
             <div class="col-4 home-iteraction">
-                <button class="btn text-uppercase">Quero Doar</button>
+                <button class="btn text-uppercase" onclick="location.href='cadastro_animal.html';">Quero Doar</button>
             </div>
             <div class="col-4 home-iteraction">
                 <button class="btn text-uppercase">Quero Contribuir</button>
             </div>
         </div>
         <h3 class="text-center text-uppercase mt-5 mb-3">Animais Disponíveis para Adoção</h3>
-        <div class="row row-cols-5 my-2 animais-adocao">
+        <div id="animaisAdocao" class="row row-cols-5 my-2 animais-adocao">
             <div class="col p-3 animais-adocao text-center">Animal 1
                 <img src="https://portaldoscaesegatos.com.br/wp-content/uploads/2018/03/filhotes-de-cachorro-200x200.jpg" class="img-thumbnail" alt="...">
             </div>
@@ -100,6 +110,23 @@
                 <img src="https://portaldoscaesegatos.com.br/wp-content/uploads/2018/03/filhotes-de-cachorro-200x200.jpg" class="img-thumbnail" alt="...">
             </div>
         </div>
+        
+
+        <script>
+            const animais = JSON.parse(localStorage.getItem('animais'));            
+            
+            let listaAnimais = '';
+            animais.data.forEach(animal => {
+                listaAnimais += `<div class="col p-3 animais-adocao text-center">${animal.nome}
+                                    <a href="animal.html?id=${animal.id}">
+                                        <img src="https://portaldoscaesegatos.com.br/wp-content/uploads/2018/03/filhotes-de-cachorro-200x200.jpg" class="img-thumbnail" alt="...">
+                                    </a> 
+                                </div>`;
+            });
+
+            const animaisCadastrados = document.getElementById('animaisAdocao');
+            animaisCadastrados.innerHTML = listaAnimais;                
+        </script>
     </section>
 
     <footer>

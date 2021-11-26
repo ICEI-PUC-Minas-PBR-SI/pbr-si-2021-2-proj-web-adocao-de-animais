@@ -26,23 +26,42 @@ const editar = (event) =>
     const id = usuario.id;
     let index = users.data.map(obj => obj.id).indexOf(id);
 
-    users.data[index].name = editarForm.nome.value;
-    users.data[index].dataNascimento = editarForm.dataNascimento.value;
-    users.data[index].email = editarForm.email.value;
-    users.data[index].password = editarForm.password.value;
-    users.data[index].user = editarForm.user.value;
-    users.data[index].phone = editarForm.user.value;
-    users.data[index].city = editarForm.cidade.value;
-    users.data[index].state = editarForm.estado.value;
+    if(usuario.userType === 2)
+    {
+        users.data[index].name = editarForm.nome.value;
+        users.data[index].email = editarForm.email.value;
+        users.data[index].password = editarForm.password.value;
+        users.data[index].phone = editarForm.telefone.value;
+        users.data[index].city = editarForm.cidade.value;
+        users.data[index].state = editarForm.estado.value;
 
 
-    localStorage.setItem('users', JSON.stringify(users));
-    sessionStorage.setItem('current_user', JSON.stringify(users.data[index]));
+        localStorage.setItem('users', JSON.stringify(users));
+        sessionStorage.setItem('current_user', JSON.stringify(users.data[index]));
 
 
-    alert("Usuário modificado com sucesso.");
-    window.location.href = 'home.html';
-
+        alert("Usuário modificado com sucesso.");
+        window.location.href = 'home.html';
+    }
+    else
+    {
+        users.data[index].name = editarForm.nome.value;
+        users.data[index].dataNascimento = editarForm.dataNascimento.value;
+        users.data[index].email = editarForm.email.value;
+        users.data[index].password = editarForm.password.value;
+        users.data[index].user = editarForm.user.value;
+        users.data[index].phone = editarForm.telefone.value;
+        users.data[index].city = editarForm.cidade.value;
+        users.data[index].state = editarForm.estado.value;
+    
+    
+        localStorage.setItem('users', JSON.stringify(users));
+        sessionStorage.setItem('current_user', JSON.stringify(users.data[index]));
+    
+    
+        alert("Usuário modificado com sucesso.");
+        window.location.href = 'home.html';
+    }
 }
 
 editarForm.addEventListener('submit', editar);

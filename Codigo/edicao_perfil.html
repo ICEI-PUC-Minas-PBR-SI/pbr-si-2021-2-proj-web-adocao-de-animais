@@ -48,8 +48,18 @@
                       <li class="nav-item me-2">
                           <a class="nav-link" href="login.html">Entrar</a>
                       </li>
-                      <li class="nav-item me-2">
-                          <a class="nav-link" href="cadastro_usuario.html">Cadastrar</a>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Cadastrar
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li class="nav-item me-2">
+                            <a class="nav-link" href="cadastro_usuario.html?user=1">Usuário</a>
+                          </li>
+                          <li class="nav-item me-2">
+                            <a class="nav-link" href="cadastro_usuario.html?user=2">ONG</a>
+                          </li>
+                        </ul>
                       </li>
                   </ul>
                 </div>
@@ -118,45 +128,81 @@
                 if (!usuario) {
                     window.location.href = 'login.html';
                 }
-                
-                html_user = `
-                    <div class="mb-3 container col-4">
-                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" value="${usuario.name}">
-                    </div>
 
-                    <div class="mb-3 container col-4">
-                        <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" placeholder="Data de Nascimento" value="${usuario.dataNascimento}">
-                    </div>
-
-                    <div class="mb-3 container col-4">
-                        <input type="text" class="form-control" id="user" name="user" placeholder="Usuário" value="${usuario.user}">
-                    </div>
-                    
-                    <div class="mb-3 container col-4">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" value="${usuario.email}">
+                console.log(usuario.userType)
+                if(usuario.userType === 2)
+                {
+                    html_user = `
+                        <div class="mb-3 container col-4">
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" value="${usuario.name}">
                         </div>
                         
                         <div class="mb-3 container col-4">
-                            <input type="number" class="form-control" id="telefone" name="telefone" placeholder="Telefone" value="${usuario.phone}">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" value="${usuario.email}">
                             </div>
                             
                             <div class="mb-3 container col-4">
-                                <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" value="${usuario.city}">
+                                <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone" value="${usuario.phone}">
                                 </div>
                                 
                                 <div class="mb-3 container col-4">
-                                    <input type="text" class="form-control" id="estado" nome="estado" placeholder="Estado" value="${usuario.state}">
+                                    <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" value="${usuario.city}">
                                     </div>
                                     
                                     <div class="mb-3 container col-4">
-                                        <input type="password" class="form-control" id="password" name="password" placeholder="Nova senha">
+                                        <input type="text" class="form-control" id="estado" nome="estado" placeholder="Estado" value="${usuario.state}">
                                         </div>
-
-                                        <div class="mb-3 container col-4 d-grid gap-2 d-md-flex justify-content-md-end">
-                                            <button class="btn btn-outline" type="submit">Confirmar alterações</button>
-                                        </div>`;
                                         
-                document.getElementById("editar").innerHTML = html_user;
+                                        <div class="mb-3 container col-4">
+                                            <input type="password" class="form-control" id="password" name="password" placeholder="Nova senha">
+                                            </div>
+    
+                                            <div class="mb-3 container col-4 d-grid gap-2 d-md-flex justify-content-md-end">
+                                                <button class="btn btn-outline" type="submit">Confirmar alterações</button>
+                                            </div>`;
+                                            
+                    document.getElementById("editar").innerHTML = html_user;
+                }
+                else{
+                    html_user = `
+                        <div class="mb-3 container col-4">
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" value="${usuario.name}">
+                        </div>
+    
+                        <div class="mb-3 container col-4">
+                            <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" placeholder="Data de Nascimento" value="${usuario.dataNascimento}">
+                        </div>
+    
+                        <div class="mb-3 container col-4">
+                            <input type="text" class="form-control" id="user" name="user" placeholder="Usuário" value="${usuario.user}">
+                        </div>
+                        
+                        <div class="mb-3 container col-4">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" value="${usuario.email}">
+                            </div>
+                            
+                            <div class="mb-3 container col-4">
+                                <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone" value="${usuario.phone}">
+                                </div>
+                                
+                                <div class="mb-3 container col-4">
+                                    <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" value="${usuario.city}">
+                                    </div>
+                                    
+                                    <div class="mb-3 container col-4">
+                                        <input type="text" class="form-control" id="estado" nome="estado" placeholder="Estado" value="${usuario.state}">
+                                        </div>
+                                        
+                                        <div class="mb-3 container col-4">
+                                            <input type="password" class="form-control" id="password" name="password" placeholder="Nova senha">
+                                            </div>
+    
+                                            <div class="mb-3 container col-4 d-grid gap-2 d-md-flex justify-content-md-end">
+                                                <button class="btn btn-outline" type="submit">Confirmar alterações</button>
+                                            </div>`;
+                                            
+                    document.getElementById("editar").innerHTML = html_user;
+                }
         </script>
     </section>
 
@@ -165,43 +211,58 @@
         <div class="container col-4 exclue_animal mb-3">
             <p><strong>Exclua os animais que cadastrou</strong></p>
         </div>
-        <div class="container col-4 d-flex justify-content-center exclue_animal_mini mb-3">
-            <div class= "col-6">
-                
-                <a href="animal.html"><img  src="img/gato.jpg"> </a>      
-                
-            </div>
-            <div class= "col-6 mb-3 mt-4 d-flex justify-content-end">
-                <button class="btn btn-outline" type="submit">Excluir</button> 
-            </div>
-            
+ 
+        <div id="animaisCadastrados" class="container d-flex col-8">
+
+            <!-- <div class="container col-2 justify-content-center exclue_animal_mini mb-3">
+                <label class="">Nome do Animal</label>
+                <div class= "col-6">
+                    
+                    <a href="animal.html"><img class="d-inline" src="img/cao.jpg"> </a>      
+                    
+                </div>
+                <div class= "col-6 mb-3 mt-4 justify-content-end">
+                    <button class="btn btn-outline d-inline" type="submit">Excluir</button> 
+                </div>
+            </div>             -->
+
         </div>
-        
-        
-        <div class="container col-4 d-flex justify-content-center exclue_animal_mini mb-3">
-            <div class= "col-6 ">
-                
-                <a href="animal.html"><img  src="img/gato2.jpg"> </a>      
-                
-            </div>
-            <div class= "col-6 mb-3 mt-4 d-flex justify-content-end">
-                <button class="btn btn-outline" type="submit">Excluir</button> 
-            </div>
+
+
+        <script>
+            const users = JSON.parse(localStorage.getItem('users'));
+            const user = JSON.parse(sessionStorage.getItem('current_user'));
+            const animais = JSON.parse(localStorage.getItem('animais'));
+            const userAnimais = [];
             
-        </div>
-        
-        
-        <div class="container col-4 d-flex justify-content-center exclue_animal_mini mb-3">
-            <div class= "col-6">
+            idBoolenReturns = animais.data.map(animal => animal.doador.id == user.id);
+            idBoolenReturns.forEach(function(element, index) {
+                if(element == true)
+                {
+                    userAnimais.push(index);
+                }
+            });
+            let listaAnimais = '';
+            userAnimais.forEach(element => {
+                let animal = animais.data[element];
+                console.log(animal);
                 
-                <a href="animal.html"><img  src="img/cao.jpg"> </a>      
-                
-            </div>
-            <div class= "col-6 mb-3 mt-4 d-flex justify-content-end">
-                <button class="btn btn-outline" type="submit">Excluir</button> 
-            </div>
-            
-        </div>
+                listaAnimais += `<div class="container col-2 justify-content-center exclue_animal_mini mb-3">
+                <label class="">${animal.nome}</label>
+                <div class= "col-6">
+                    
+                    <a href="animal.html"><img class="d-inline" src="img/cao.jpg"> </a>      
+                    
+                </div>
+                <div class= "col-6 mb-3 mt-4 justify-content-end">
+                    <button value="${animal.id}" class="btn btn-outline d-inline removerAnimal" type="submit">Excluir</button> 
+                </div>
+            </div> `;
+            });
+
+            const animaisCadastrados = document.getElementById('animaisCadastrados');
+            animaisCadastrados.innerHTML = listaAnimais;                
+        </script>
     </section>
 
     <footer>
@@ -230,6 +291,8 @@
     </footer>
 
 
+
+    <script type="module" src="js/animal/excluir-animal.js"></script>
     <script type="module" src="js/usuario/editar.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

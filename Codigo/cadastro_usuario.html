@@ -43,8 +43,18 @@
                       <li class="nav-item me-2">
                           <a class="nav-link" href="login.html">Entrar</a>
                       </li>
-                      <li class="nav-item me-2">
-                          <a class="nav-link" href="cadastro_usuario.html">Cadastrar</a>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Cadastrar
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li class="nav-item me-2">
+                            <a class="nav-link" href="cadastro_usuario.html?user=1">Usuário</a>
+                          </li>
+                          <li class="nav-item me-2">
+                            <a class="nav-link" href="cadastro_usuario.html?user=2">ONG</a>
+                          </li>
+                        </ul>
                       </li>
                   </ul>
                 </div>
@@ -80,6 +90,51 @@
         </div>
         
         <form id="cadastro" method="post">
+
+            <div class="mb-3 container col-4">
+                <select id="tipoUsuario" name="tipoUsuario" class="form-select" aria-label="Default select example">
+                    <option selected value="1">Pessoa Física</option>
+                    <option value="2">ONG</option>
+                </select>
+
+                <script>
+                    const tipoUsuario = document.getElementById('tipoUsuario');
+                    const hideFields = () => {
+                        if(tipoUsuario.value === "1")
+                        {
+                            document.getElementById("dataNascimento").style.display = "block";
+                            document.getElementById("dataNascimento").value = null;
+                            document.getElementById("user").style.display = "block";
+                            document.getElementById("user").value = null;
+                        }
+                        if(tipoUsuario.value === "2")
+                        {
+                            document.getElementById("dataNascimento").style.display = "none";
+                            document.getElementById("dataNascimento").value = null;
+                            document.getElementById("user").style.display = "none";
+                            document.getElementById("user").value = null;
+                        }
+                    }
+                    tipoUsuario.addEventListener('change', hideFields);
+                </script>
+
+            </div>
+            <script>
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                let usrType = urlParams.get('user');
+                usrType = parseInt(usrType);
+
+                if(usrType === 2)
+                {
+                    document.querySelector('#tipoUsuario').value = '2';
+                }
+                else
+                {
+                    document.querySelector('#tipoUsuario').value = '1';
+                }
+
+            </script>
             <div class="mb-3 container col-4">
                 <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
             </div>
@@ -90,7 +145,7 @@
                 <input type="text" class="form-control" name="estado" id="estado" placeholder="Estado">
             </div>
             <div class="mb-3 container col-4">
-                <input type="number" class="form-control" name="telefone" id="telefone" placeholder="Telefone">
+                <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone">
             </div>
             <div class="mb-3 container col-4">
                 <input type="date" class="form-control" name="dataNascimento" id="dataNascimento" placeholder="Data de Nascimento">
@@ -102,15 +157,16 @@
                 <input type="email" class="form-control" name="email" id="email" placeholder="E-mail">
             </div>
             <div class="mb-3 container col-4 my-4">
-                <input type="password" class="form-control" name="password" id="password" placeholder="Senha">
+                <input type="password" class="form-control" name="password" id="password" placeholder="Senha">                
             </div>
+            
             
             <div class="mb-3 container col-4 d-grid gap-2 d-md-flex justify-content-md-end">
                 <button class="btn btn-outline"type="submit" id="cadastroSubmit">Cadastrar</button>
-            </div>
-            
+            </div>            
               
         </form>
+
     </section>
 
     <footer>

@@ -20,57 +20,67 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand me-5 text-center" id="logo" href="home.html">BH ADOTA PET</a>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item me-2">
-                    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
-                  </li>
-                  <li class="nav-item me-2">
-                    <a class="nav-link" href="#">Dicas</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre</a>
-                  </li>
-                </ul>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+              <a class="navbar-brand me-5 text-center" id="logo" href="home.html">BH ADOTA PET</a>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item me-2">
+                  <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                </li>
+                <li class="nav-item me-2">
+                  <a class="nav-link" href="#">Dicas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sobre</a>
+                </li>
+              </ul>
 
-                <div id="user-status">
-                  <ul class="navbar-nav">
-                      <li class="nav-item me-2">
-                          <a class="nav-link" href="login.html">Entrar</a>
-                      </li>
-                      <li class="nav-item me-2">
-                          <a class="nav-link" href="cadastro_usuario.html">Cadastrar</a>
-                      </li>
-                  </ul>
-                </div>
-                <script>
-                  usuario = JSON.parse(sessionStorage.getItem('current_user'));
-                  
-                  if(usuario)
-                  {
-                    perfil_li = `<ul class="navbar-nav">
-                                    <li class="nav-item me-2">
-                                        <a class="nav-link" href="perfil.html">Perfil</a>
-                                    </li>
-                                </ul>`;
-                    document.getElementById("user-status").innerHTML = perfil_li;
-                  }
-                </script>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="typing.." aria-label="Search">
-                  <button class="btn" type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                      </svg>
-                  </button>
-                </form>
+              <div id="user-status">
+                <ul class="navbar-nav">
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="login.html">Entrar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cadastrar
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li class="nav-item me-2">
+                          <a class="nav-link" href="cadastro_usuario.html?user=1">Usuário</a>
+                        </li>
+                        <li class="nav-item me-2">
+                          <a class="nav-link" href="cadastro_usuario.html?user=2">ONG</a>
+                        </li>
+                      </ul>
+                    </li>
+                </ul>
               </div>
+              <script>
+                usuario = JSON.parse(sessionStorage.getItem('current_user'));
+                
+                if(usuario)
+                {
+                  perfil_li = `<ul class="navbar-nav">
+                                  <li class="nav-item me-2">
+                                      <a class="nav-link" href="perfil.html">Perfil</a>
+                                  </li>
+                              </ul>`;
+                  document.getElementById("user-status").innerHTML = perfil_li;
+                }
+              </script>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="typing.." aria-label="Search">
+                <button class="btn" type="submit">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </button>
+              </form>
             </div>
-          </nav>
+          </div>
+        </nav>
     </header>
 
     <section>
@@ -78,12 +88,12 @@
             <p><strong>LOGIN</strong></p>
         </div>
     
-        <form action="">
+        <form id="login" action="">
             <div class="mb-3 container col-4">
-                <input type="text" class="form-control" id="formGroupExampleInput7" placeholder="E-mail">
+                <input type="email" class="form-control" name="email" id="email" placeholder="E-mail">
             </div>
             <div class="mb-3 container col-4 my-4">
-                <input type="text" class="form-control" id="formGroupExampleInput6" placeholder="Senha">
+                <input type="password" class="form-control" name="password" id="password" placeholder="Senha">
             </div>
             <div class="mb-3 container col-4 d-grid gap-2 d-md-flex justify-content-md-end">
                 <button class="btn btn-outline"type="submit">Entrar</button>
@@ -91,7 +101,7 @@
         </form>
     
         <div class="container col-4 linkcriarconta text-center">
-            <a href="cadastro.html">Criar conta</a>
+            <a href="cadastro_usuario.html">Criar conta</a>
         </div>
     </section>
 
@@ -119,5 +129,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/usuario/logar.js"></script>
 </body>
 </html>
