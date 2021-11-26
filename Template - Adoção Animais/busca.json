@@ -1,0 +1,182 @@
+[
+    {
+        "id": "1",
+        "nome": "Acerola",
+        "especie": "cao",
+        "porte": "pequeno",
+        "sexo": "macho",
+        "idade": "0 a 6 meses",
+        "descricao": "Esse é o Acerola..."
+    },
+    {
+        "id": "2",
+        "nome": "Tequila",
+        "especie": "cao",
+        "porte": "medio",
+        "sexo": "fêmea",
+        "idade": "6 meses a 1 ano",
+        "descricao": "Essa é a Tequila..."
+    },
+    {
+        "id": "3",
+        "nome": "Amendoim",
+        "especie": "cao",
+        "porte": "grande",
+        "sexo": "macho",
+        "idade": "1 a 2 anos",
+        "descricao": "Esse é o Amendoim..."
+    },
+    {
+        "id": "4",
+        "nome": "Mel",
+        "especie": "cao",
+        "porte": "pequeno",
+        "sexo": "fêmea",
+        "idade": "Mais de 2 anos",
+        "descricao": "Essa é a Mel..."
+    },
+    {
+        "id": "5",
+        "nome": "Almôndega",
+        "especie": "cao",
+        "porte": "medio",
+        "sexo": "macho",
+        "idade": "0 a 6 meses",
+        "descricao": "Esse é o Almôndega..."
+    },
+    {
+        "id": "6",
+        "nome": "Cacau",
+        "especie": "cao",
+        "porte": "grande",
+        "sexo": "fêmea",
+        "idade": "6 meses a 1 ano",
+        "descricao": "Essa é a Cacau..."
+    },
+    {
+        "id": "7",
+        "nome": "Charles",
+        "especie": "cao",
+        "porte": "pequeno",
+        "sexo": "macho",
+        "idade": "1 a 2 anos",
+        "descricao": "Esse é o Charles..."
+    },
+    {
+        "id": "8",
+        "nome": "Matilda",
+        "especie": "cao",
+        "porte": "medio",
+        "sexo": "fêmea",
+        "idade": "Mais de 2 anos",
+        "descricao": "Essa é a Matilda..."
+    },
+    {
+        "id": "9",
+        "nome": "Sid",
+        "especie": "cao",
+        "porte": "grande",
+        "sexo": "macho",
+        "idade": "0 a 6 meses",
+        "descricao": "Esse é o Sid..."
+    },
+    {
+        "id": "10",
+        "nome": "Arya",
+        "especie": "cao",
+        "porte": "pequeno",
+        "sexo": "fêmea",
+        "idade": "6 meses a 1 ano",
+        "descricao": "Essa é a Arya..."
+    },
+    {
+        "id": "11",
+        "nome": "Bolinho",
+        "especie": "gato",
+        "porte": "medio",
+        "sexo": "macho",
+        "idade": "1 a 2 anos",
+        "descricao": "Esse é o Bolinho..."
+    },
+    {
+        "id": "12",
+        "nome": "Jujuba",
+        "especie": "gato",
+        "porte": "pequeno",
+        "sexo": "fêmea",
+        "idade": "Mais de 2 anos",
+        "descricao": "Essa é a Jujuba..."
+    },
+    {
+        "id": "13",
+        "nome": "Torrada",
+        "especie": "gato",
+        "porte": "medio",
+        "sexo": "macho",
+        "idade": "0 a 6 meses",
+        "descricao": "Esse é o Torrada..."
+    },
+    {
+        "id": "14",
+        "nome": "Karl",
+        "especie": "gato",
+        "porte": "pequeno",
+        "sexo": "macho",
+        "idade": "6 meses a 1 ano",
+        "descricao": "Esse é o Karl..."
+    },
+    {
+        "id": "15",
+        "nome": "Gina",
+        "especie": "gato",
+        "porte": "medio",
+        "sexo": "fêmea",
+        "idade": "1 a 2 anos",
+        "descricao": "Essa é a Gina..."
+    },
+    {
+        "id": "16",
+        "nome": "Shelby",
+        "especie": "gato",
+        "porte": "pequeno",
+        "sexo": "macho",
+        "idade": "Mais de 2 anos",
+        "descricao": "Esse é o Shelby..."
+    },
+    {
+        "id": "17",
+        "nome": "Xica",
+        "especie": "gato",
+        "porte": "medio",
+        "sexo": "fêmea",
+        "idade": "0 a 6 meses",
+        "descricao": "Essa é a Xica..."
+    },
+    {
+        "id": "18",
+        "nome": "Kiki",
+        "especie": "gato",
+        "porte": "pequeno",
+        "sexo": "fêmea",
+        "idade": "6 meses a 1 ano",
+        "descricao": "Essa é a Kiki..."
+    },
+    {
+        "id": "19",
+        "nome": "Zelda",
+        "especie": "gato",
+        "porte": "medio",
+        "sexo": "fêmea",
+        "idade": "1 a 2 anos",
+        "descricao": "Essa é a Zelda..."
+    },
+    {
+        "id": "20",
+        "nome": "Pirata",
+        "especie": "gato",
+        "porte": "pequeno",
+        "sexo": "macho",
+        "idade": "Mais de 2 anos",
+        "descricao": "Esse é o Pirata..."
+    }
+]
